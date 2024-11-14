@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 25px 1fr 70px 30px;
+    min-height: 100vh;
+    grid-template-areas:
+    "header header header" 
+    "navbar navbar navbar" 
+    "main main main" 
+    "footer footer footer" 
+    "copyright copyright copyright"
+}
+
+.grid-container .header{
+  grid-area: header;
+  background-color: #26b460;
+}
+
+.grid-container .navbar{
+  grid-area: navbar;
+  background-color: #68478d;
+}
+.grid-container .main{
+  grid-area: main;
+  background-color: #ffffff;
+}
+.grid-container .footer{
+  grid-area: footer;
+  background-color: #26b460;
+}
+
+.menu-navbar{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-navbar a{
+  color: white;
+  text-decoration: none;
+  font-size: 7px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.menu-navbar p{
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.menu-navbar img{
+  width: 15px;
+}
+
+.menu-navbar a:hover{
+  color: #26b460;
+}
+
+.header{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-header{
+  width: 60%;
+  height: 90%;
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr 1fr 1fr 40px;
+  grid-template-rows: 1fr;
+}
+
+.logobnb{
+  grid-column: 1/2;
+  grid-row: 3/1;
+  display: flex;
+  align-items: center;
+}
+
+.logobnb img{
+  width: 100%;
+}
+
+.op1{
+  grid-column: 3/4;
+
+  display: flex;
+  gap: 10px;
+}
+.op1 a, .op1 p{
+  margin-top: 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 7px;
+}
+
+.op1 a:hover{
+  color: #68478d;
+}
+
+.op1 p{
+  margin-top: 23px;
+  font-size: 10px;
+  font-weight: 100;
+
+}
+
+.op2{
+  width: 90%;
+  height: 90%;
+  grid-column: 4/5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20;
+}
+
+.op2 a{
+  margin-top: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 8px;
+  margin: 0;
+  margin-left: 15px;
+  margin-top: 10px;
+  display: flex;
+}
+
+.op2 a:hover{
+  color: #68478d;
+}
+
+.op2 img{
+  width: 15px;
+}
+
+.op3{
+  grid-column: 5/6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.op3 button{
+  width: 105px;
+  height: 23px;
+  font-size: 8px;
+  background-color: #68478d;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.op4{
+  grid-column: 6/7;
+  font-size: 9px;
+  text-align: center;
+  margin-top: 17px;
+}
+
+.footer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.redes{
+  display: flex;
+  font-size: 10px;
+  align-items: center;
+  gap: 10px;
+}
+
+.atencion{
+  font-size: 10px;
+  text-align: center;
+  display: flex;
+}
+
+.atencion img{
+  width: 27px;
+  height: 27px;
+}
+
+.appstore img{
+  width: 100px;
+}
+
+.google-play img{
+  width: 100px;
+}
+
+.redes img{
+  filter: brightness(0) invert(1);
+  width: 20px;
+  height: 20px;
+}
+
+.copyright{
+  color: #26b460;
+  font-size: 8px;
+  text-align: center;
+  width: 300%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-page-1{
+  background-color: #26b460;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 40vh 70vh 150vh;
+  grid-template-areas:
+  "portada portada portada" 
+  "opciones opciones opciones" 
+  "informacion informacion informacion" 
+}
+
+.portada{
+  background-color: #68478d;
+  grid-area: portada;
+}
+
+.opciones{
+  grid-area: opciones;
+  background-color: #26b460
+}
+
+.informacion{
+  grid-area: informacion;
+  background-color: white;
+}
+
+.carousel {
+  position: relative;
+  max-width: 100vw;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+  width: 100%;
+  display: none;
+}
+
+.carousel-images img.active {
+  display: block;
+}
+
+.boton button{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #533971;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+.opciones{
+  width: 60%;
+  height: 60%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-top: 70px;
+}
+
+
+
+.opciones a{
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.elemento{
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.elemento img{
+  width: 30%;
+}
+
+.informacion{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.cajas{
+  background-color: white;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.box-1 img{
+  width: 200px;
+  border-radius: 6px;
+}
+
+.box-2{
+  color: black;
+  font-size: 10px;
+}
+
+.box-2 h3{
+  color: #26b460;
+}
+
+.main-page-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px 500px;
+  grid-template-areas:
+  "ahorro-portada ahorro-portada ahorro-portada" 
+  "ahorro-opciones ahorro-opciones ahorro-opciones" 
+}
+
+.ahorro-portada{
+  background-color: #533971;
+  grid-area: ahorro-portada;
+}
+.ahorro-opciones{
+  background-color: white;
+  grid-area: ahorro-opciones;
+}
+
+.ahorro-portada img{
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ahorro-opciones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.ahorro-caja{
+  width: 200px;
+  height: 300px;
+  background-color: transparent;
+  border: gray solid 1px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ahorro-caja img{
+  width: 150px;
+  border-radius: 6px;
+}
+
+.ahorro-caja h3{
+  color: gray;
+  font-size: 15px;
+}
+
+.ahorro-caja p{
+  color: gray;
+  font-size: 7px;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.ahorro-caja button{
+  background-color: #68478d;
+  color: white;
+  padding: 5px;
+  width: 50%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main-page-3{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px 300px;
+  grid-template-areas:
+  "beneficios-portada beneficios-portada beneficios-portada" 
+  "beneficios-opciones beneficios-opciones beneficios-opciones" 
+}
+
+.beneficios-portada{
+  background-color: #533971;
+  grid-area: beneficios-portada;
+}
+.beneficios-opciones{
+  background-color: white;
+  grid-area: beneficios-opciones;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.beneficios-portada img{
+  height: 100%;
+}
+
+.caja-beneficios{
+  width: 70%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.beneficio-box{
+  width: 30%;
+  height: 35%;
+  border: 1px solid #26b460;
+  border-radius: 10px;
+}
+
+.beneficio-box img{
+  width: 40%;
+  filter: invert(67%) sepia(50%) saturate(1000%) hue-rotate(90deg) brightness(90%);
+}
+
+.beneficio-box a{
+  text-decoration: none;
+  color: #2b9859;
+}
+
+.beneficio-box a{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.main-page-4{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px 500px;
+  grid-template-areas:
+  "seguros-portada seguros-portada seguros-portada" 
+  "seguros-opciones seguros-opciones seguros-opciones" 
+}
+
+.seguros-portada{
+  background-color: #533971;
+  grid-area: seguros-portada;
+}
+.seguros-opciones{
+  background-color: white;
+  grid-area: seguros-opciones;
+}
+
+.seguros-portada img{
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+
+.seguros-opciones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.seguros-caja{
+  width: 200px;
+  height: 300px;
+  background-color: transparent;
+  border: gray solid 1px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.seguros-caja img{
+  width: 150px;
+  border-radius: 6px;
+}
+
+.seguros-caja h3{
+  color: gray;
+  font-size: 15px;
+  text-align: center;
+}
+
+.seguros-caja p{
+  color: gray;
+  font-size: 7px;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.seguros-caja button{
+  background-color: #68478d;
+  color: white;
+  padding: 5px;
+  width: 50%;
+  border-radius: 5px;
+  cursor: pointer;
+}
